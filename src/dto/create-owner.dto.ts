@@ -1,4 +1,4 @@
-import { IsNotEmpty, IsString, MaxLength } from 'class-validator';
+import { IsDate, IsNotEmpty, IsString, MaxLength } from 'class-validator';
 import { GenderEnum } from '../interface/IOwner';
 
 export class CreateOwnerDto {
@@ -15,4 +15,11 @@ export class CreateOwnerDto {
   @IsString()
   @IsNotEmpty()
   readonly gender: GenderEnum;
+
+  @IsString()
+  @IsNotEmpty()
+  readonly cnp: string;
+
+  @IsDate()
+  readonly birthDate: Date;
 }
