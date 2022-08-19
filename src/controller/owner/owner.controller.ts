@@ -58,7 +58,7 @@ export class OwnerController {
   async getAllOwners(@Res() response) {
     try {
       const ownerList = await this.ownerService.getAllOwners();
-      return response.status(HttpStatus.OK).json({ ownerList });
+      return response.status(HttpStatus.OK).json(ownerList);
     } catch (error) {
       return response.status(error.status).json(error.response);
     }
