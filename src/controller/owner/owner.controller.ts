@@ -45,10 +45,7 @@ export class OwnerController {
         ownerId,
         updateOwnerDto,
       );
-      return response.status(HttpStatus.OK).json({
-        message: 'Owner has been updated successfully',
-        updateOwner,
-      });
+      return response.status(HttpStatus.OK).json(updateOwner);
     } catch (error) {
       return response.status(error.status).json(error.response);
     }
@@ -68,7 +65,7 @@ export class OwnerController {
   async getOwnerById(@Res() response, @Param('id') ownerId: string) {
     try {
       const owner = await this.ownerService.getOwnerById(ownerId);
-      return response.status(HttpStatus.OK).json({ owner });
+      return response.status(HttpStatus.OK).json(owner);
     } catch (error) {
       return response.status(error.status).json(error.response);
     }
