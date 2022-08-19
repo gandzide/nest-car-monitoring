@@ -7,7 +7,7 @@ export interface IOwner extends Document {
 }
 
 export enum GenderEnum {
-  male,
-  female,
-  unknown,
+  M = 'Male',
+  F = 'Female',
+  NA = 'Rather not say',
 }

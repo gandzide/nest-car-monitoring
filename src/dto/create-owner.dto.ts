@@ -1,4 +1,4 @@
-import { IsNotEmpty, IsNumber, IsString, MaxLength } from 'class-validator';
+import { IsNotEmpty, IsString, MaxLength } from 'class-validator';
 import { GenderEnum } from '../interface/IOwner';
 
 export class CreateOwnerDto {
@@ -12,7 +12,7 @@ export class CreateOwnerDto {
   @MaxLength(30)
   readonly lastName: number;
 
-  @IsNumber()
+  @IsString()
   @IsNotEmpty()
   readonly gender: GenderEnum;
 }
