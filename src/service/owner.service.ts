@@ -1,9 +1,9 @@
 import { Injectable, NotFoundException } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
-import { IOwner } from '../../interface/IOwner';
-import { CreateOwnerDto } from '../../dto/create-owner.dto';
-import { UpdateOwnerDto } from '../../dto/update-owner.dto';
+import { IOwner } from '../interface/IOwner';
+import { CreateOwnerDto } from '../dto/create-owner.dto';
+import { UpdateOwnerDto } from '../dto/update-owner.dto';
 
 @Injectable()
 export class OwnerService {

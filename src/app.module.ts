@@ -2,8 +2,8 @@ import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { MongooseModule } from '@nestjs/mongoose';
-import { OwnerService } from './service/owner/owner.service';
-import { OwnerController } from './controller/owner/owner.controller';
+import { OwnerService } from './service/owner.service';
+import { OwnerController } from './controller/owner.controller';
 import { OwnerSchema } from './schema/owner.schema';
 
 @Module({

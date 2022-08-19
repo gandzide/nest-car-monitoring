@@ -9,9 +9,9 @@ import {
   Put,
   Res,
 } from '@nestjs/common';
-import { OwnerService } from '../../service/owner/owner.service';
-import { CreateOwnerDto } from '../../dto/create-owner.dto';
-import { UpdateOwnerDto } from '../../dto/update-owner.dto';
+import { OwnerService } from '../service/owner.service';
+import { CreateOwnerDto } from '../dto/create-owner.dto';
+import { UpdateOwnerDto } from '../dto/update-owner.dto';
 
 @Controller('owner')
 export class OwnerController {
