@@ -4,6 +4,8 @@ export interface IOwner extends Document {
   readonly firstName: string;
   readonly lastName: string;
   readonly gender: GenderEnum;
+  readonly cnp: string;
+  readonly birthDate: string;
 }
 
 export enum GenderEnum {

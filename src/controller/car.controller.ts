@@ -11,10 +11,7 @@ export class CarController {
   async createCar(@Res() response, @Body() createCarDto: CreateCarDto) {
     try {
       const newCar = await this.carService.createCar(createCarDto);
-      return response.status(HttpStatus.CREATED).json({
-        message: 'Car has been created successfully',
-        newCar,
-      });
+      return response.status(HttpStatus.CREATED).json(newCar);
     } catch (err) {
       return response.status(HttpStatus.BAD_REQUEST).json({
         statusCode: 500,

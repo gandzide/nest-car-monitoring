@@ -21,10 +21,7 @@ export class OwnerController {
   async createOwner(@Res() response, @Body() createOwnerDto: CreateOwnerDto) {
     try {
       const newOwner = await this.ownerService.createOwner(createOwnerDto);
-      return response.status(HttpStatus.CREATED).json({
-        message: 'Owner has been created successfully',
-        newOwner,
-      });
+      return response.status(HttpStatus.CREATED).json(newOwner);
     } catch (err) {
       return response.status(HttpStatus.BAD_REQUEST).json({
         statusCode: 500,

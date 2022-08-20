@@ -2,7 +2,7 @@ import { Document } from 'mongoose';
 
 export interface ICar extends Document {
   readonly brand: string;
-  readonly model: number;
+  readonly model: string;
   readonly cubicCapacity?: number;
   readonly serialNumber?: string;
   readonly type?: string;

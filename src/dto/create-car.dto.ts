@@ -1,5 +1,4 @@
 import {
-  IsDate,
   IsNotEmpty,
   IsNumber,
   IsString,
@@ -20,7 +19,7 @@ export class CreateCarDto {
   @IsNotEmpty()
   @MaxLength(15)
   @MinLength(2)
-  readonly model: number;
+  readonly model: string;
 
   @IsNumber()
   @Min(500)
@@ -45,7 +44,7 @@ export class CreateCarDto {
   @MinLength(2)
   readonly fuelType?: string;
 
-  @IsDate()
+  @IsString()
   @IsNotEmpty()
   readonly ownerId: string;
 }

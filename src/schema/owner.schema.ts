@@ -9,6 +9,10 @@ export class Owner {
   lastName: string;
   @Prop()
   gender: GenderEnum;
+  @Prop()
+   cnp: string;
+  @Prop()
+   birthDate: string;
 }
 
 export const OwnerSchema = SchemaFactory.createForClass(Owner);

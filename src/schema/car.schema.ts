@@ -5,7 +5,7 @@ export class Car {
   @Prop()
   brand: string;
   @Prop()
-  model: number;
+  model: string;
   @Prop()
   cubicCapacity?: number;
   @Prop()
